@@ -1,0 +1,12 @@
+<div class="contents-row">
+  <div class="task-post">
+    <h3>タスクを編集する</h3>
+    <%= form_with(model: @task, local: true) do |form| %>
+      <%= form.text_field :task_name, placeholder: "タスク名を入力" %>
+      <%= form.datetime_field :deadline %>
+      <%= form.number_field :required_time, placeholder: "所要時間" %>
+      <%= form.text_area :time_unit, placeholder: "分or時間" %>
+      <%= form.submit "完了" %>
+    <% end %>
+  </div>
+</div>
