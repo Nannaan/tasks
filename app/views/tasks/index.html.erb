@@ -1,7 +1,13 @@
 <div class="contents-row">
   <div class="task-post">
     <div class="task-input">
-      <input id="task-input" type="text" placeholder="新しいタスクを追加">
+      <input id="task-name" type="text" placeholder="新しいタスク名を入力">
+      <input id="task-deadline" type="datetime-local">
+      <input id="task-time" type="number" placeholder="所要時間">
+      <select id="task-time-unit">
+        <option value="minute">分</option>
+        <option value="hour">時間</option>
+      </select>
       <button onclick="addTask()">追加</button>
     </div>
     <% @tasks.each do |task| %>
@@ -11,7 +17,7 @@
           <%= task.task_name %>
           <%= task.deadline.strftime("%m/%d %H:%M") %>
         </label>
-        <div>
+        <div class="task-edit">
           <button onclick="editTask(event)">編集</button>
           <button onclick="deleteTask(event)">削除</button>
         </div>

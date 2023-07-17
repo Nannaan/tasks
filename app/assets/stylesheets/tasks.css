@@ -16,20 +16,32 @@
 }
 
 .task-input {
-
+  width: 60vw;
+  height: 80px;
+  padding: 20px;
 }
 
 .task-list {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 60vw;
+  height: 80px;
   margin-bottom: 5px;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: large;
 }
 
 .task-list label {
   display: flex;
   align-items: center;
+}
+
+.task-edit{
+  
+}
+
+.task-edit button {
+  
 }
