@@ -1,0 +1,21 @@
+<div class="contents-row">
+  <div class="task-post">
+    <div class="task-input">
+      <input id="task-input" type="text" placeholder="新しいタスクを追加">
+      <button onclick="addTask()">追加</button>
+    </div>
+    <% @tasks.each do |task| %>
+      <div class="task-list">
+        <label>
+          <input type="checkbox" onchange="completeTask(event)">
+          <%= task.task_name %>
+          <%= task.deadline.strftime("%m/%d %H:%M") %>
+        </label>
+        <div>
+          <button onclick="editTask(event)">編集</button>
+          <button onclick="deleteTask(event)">削除</button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
