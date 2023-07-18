@@ -5,7 +5,7 @@
       <%= form.text_field :task_name, placeholder: "新しいタスクを入力" %>
       <%= form.datetime_field :deadline %>
       <%= form.number_field :required_time, placeholder: "所要時間" %>
-      <%= form.text_area :time_unit, placeholder: "分or時間" %>
+      <%= form.collection_select :time_unit, TimeUnit.all, :id, :name, prompt: "選択してください" %>
       <%= form.submit "追加" %>
     <% end %>
   </div>

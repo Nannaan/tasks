@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string   :task_name
       t.datetime :deadline
       t.integer  :required_time
-      t.integer  :time_unit
+      t.string   :time_unit
       t.timestamps
     end
   end
