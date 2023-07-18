@@ -1,3 +1,9 @@
+/* タイトル */
+h1 {
+  font-size: 50px;
+  text-decoration: none;
+}
+
 header{
   display: flex;
   justify-content: space-evenly;
@@ -10,6 +16,7 @@ header{
 
 }
 
+/* 一覧表示部分 */
 .contents-row {
   width: 100%;
   margin-left: auto;
@@ -27,12 +34,17 @@ header{
   margin-top: 20px;
 }
 
+.a post {
+
+}
+
 .task-input {
   width: 60vw;
   height: 80px;
   padding: 20px;
 }
 
+/* 一つのタスク */
 .task-list {
   display: flex;
   justify-content: space-between;
@@ -45,11 +57,21 @@ header{
   font-size: large;
 }
 
+/* 左側 */
 .task-list label {
   display: flex;
   align-items: center;
 }
 
+.task-name {
+  font-size: 23px;
+}
+
+.deadline {
+
+}
+
+/* 右側 */
 .task-edit{
   
 }

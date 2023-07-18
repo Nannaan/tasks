@@ -5,8 +5,8 @@
       <div class="task-list">
         <label>
           <input type="checkbox" onchange="completeTask(event)">
-          <%= task.task_name %>
-          <%= task.deadline.strftime("%m/%d %H:%M") %>
+          <span class="task-name"><%= task.task_name %></span>
+          <span class="deadline"><%= task.deadline.strftime("%m/%d %H:%M") %></span>
         </label>
         <div class="task-edit">
           <li><%= link_to '編集', edit_task_path(task.id), method: :get %></li>
