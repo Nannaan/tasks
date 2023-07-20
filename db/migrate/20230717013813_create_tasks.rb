@@ -3,8 +3,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
     create_table :tasks do |t|
       t.string   :task_name
       t.datetime :deadline
-      t.integer  :required_time
-      t.string   :time_unit
+      t.string   :required_time
       t.timestamps
     end
   end

@@ -6,7 +6,12 @@
         <label>
           <input type="checkbox" onchange="completeTask(event)">
           <span class="task-name"><%= task.task_name %></span>
-          <span class="deadline"><%= task.deadline.strftime("%m/%d %H:%M") %></span>
+          <% if task.deadline.present? %>
+            <span class="deadline"><%= task.deadline.strftime("%m/%d %H:%M") %></span>
+          <% else %>
+            <span class="deadline">時間がある時</span>
+          <% end %>
+          所要時間<span class="required-time"><%= task.required_time %></span>
         </label>
         <div class="task-edit">
           <li><%= link_to '編集', edit_task_path(task.id), method: :get %></li>

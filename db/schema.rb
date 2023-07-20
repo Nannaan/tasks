@@ -15,8 +15,7 @@ ActiveRecord::Schema.define(version: 2023_07_17_013813) do
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "task_name"
     t.datetime "deadline"
-    t.integer "required_time"
-    t.string "time_unit"
+    t.string "required_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
