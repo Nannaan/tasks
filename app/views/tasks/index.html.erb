@@ -20,8 +20,8 @@
           <% end %>
         </label>
         <div class="task-edit">
-          <li><%= link_to '編集', edit_task_path(task.id), method: :get %></li>
-          <li><%= link_to '削除', task_path(task.id), method: :delete %></li>
+          <button><%= link_to '編集', edit_task_path(task.id), method: :get %></button>
+          <button><%= link_to '削除', task_path(task.id), method: :delete, data: { confirm: '本当に削除しますか？' } %></button>
         </div>
       </div>
     <% end %>
