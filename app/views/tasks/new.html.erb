@@ -1,7 +1,7 @@
 <div class="contents-row">
   <div class="task-post">
     <h3>タスクを追加する</h3>
-    <%= form_with(model: @tweet, local: true) do |form| %>
+    <%= form_with(model: @task, local: true) do |form| %>
       <%= form.text_field :task_name, placeholder: "新しいタスクを入力" %>
       <%= form.datetime_field :deadline %>
       <%= form.text_field :required_time, placeholder: "所要時間（例：5分、1時間）" %>
