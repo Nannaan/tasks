@@ -27,10 +27,12 @@
     <% end %>
 
     <%# タスクがない時 %>
-    <div class="no-task-message">
-      <p>タスクはありません</p>
-      <%= image_tag("s512_choju57_0019_1.png", style: "max-width: 200px;") %>
-    </div>
+    <% if @tasks.blank? %>
+      <div class="no-task-message">
+        <p>タスクはありません</p>
+        <%= image_tag("s512_choju57_0019_1.png", style: "max-width: 300px;") %>
+      </div>
+    <% end %>
 
   </div>
 </div>
