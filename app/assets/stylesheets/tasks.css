@@ -136,3 +136,15 @@ input[type=checkbox] {
 .task-edit button:hover {
   background-color: #9CB4CC;
 }
+
+/* タスクがない時 */
+.no-task-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.no-task-message p {
+  font-size: 48px;
+}
