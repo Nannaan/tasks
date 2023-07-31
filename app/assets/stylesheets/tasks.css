@@ -81,7 +81,8 @@
 /* 左側 */
 .task-list label {
   display: flex;
-  align-items: center;
+  position: relative;
+  width: auto;
 }
 
 input[type=checkbox] {
@@ -89,12 +90,22 @@ input[type=checkbox] {
   height: 30px;
 }
 
+.completed {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
 .task-name {
-  font-size: 23px;
+  font-size: 30px;
+}
+
+.required_time {
+  margin-left: 30px;
 }
 
 .deadline {
-
+  position: absolute;
+  bottom: 5px;
 }
 
 /* 右側 */
