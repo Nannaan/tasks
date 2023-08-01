@@ -26,14 +26,13 @@
   background-color: #ccc;
 }
 
-/* 一覧表示部分 */
 .contents-row {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0;
   max-width: 660px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* タスク追加ボタン */
@@ -49,8 +48,8 @@
   color: black;
   padding: 8px 16px;
   text-decoration: none;
-  font-size: 24px;
-  border-radius: 4px;
+  font-size: 36px;
+  border-radius: 10px;
   margin-bottom: 20px;
   border: 1px solid black;
 }
@@ -147,4 +146,27 @@ input[type=checkbox] {
 
 .no-task-message p {
   font-size: 48px;
+}
+
+/* タスク登録画面 */
+.task-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.task-post input[type="text"],
+.task-post input[type="datetime-local"] {
+  width: 600px;
+  height: 100px;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.task-post input[type="submit"] {
+  width: 200px;
+  height: 50px;
+  font-size: 18px;
+  margin: 10px;
 }
