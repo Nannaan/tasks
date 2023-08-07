@@ -149,17 +149,26 @@ input[type=checkbox] {
 }
 
 /* タスク登録画面 */
+.container {
+  background-color: #f0f0f0;
+}
+
+.contents-row {
+  background-color: white;
+}
+
 .task-post {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  padding: 20px;
 }
 
 .task-post input[type="text"],
 .task-post input[type="datetime-local"] {
   width: 600px;
-  height: 100px;
+  height: 50px;
   font-size: 18px;
   margin: 10px;
 }
