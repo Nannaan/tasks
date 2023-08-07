@@ -49,7 +49,31 @@
         } else {
           taskName.classList.remove("completed");
         }
+        checkAllTasksCompleted();
       });
     });
   });
+
+  function checkAllTasksCompleted() {
+    const allTasks = document.querySelectorAll('.task-list');
+
+    for (let i = 0; i < allTasks.length; i++) {
+      if (!allTasks[i].querySelector('input[type="checkbox"]').checked) {
+        return;
+      }
+    }
+
+    praiseUser();
+  }
+
+  function praiseUser() {
+    const praises = [
+        '素晴らしい！全てのタスクを達成しました！',
+        'おめでとうございます！すべてのタスクが完了しました！',
+        'すごい！全てのタスクにチェックがつきました！'
+    ];
+
+    const randomIndex = Math.floor(Math.random() * praises.length);
+    alert(praises[randomIndex]);
+  }
 </script>
