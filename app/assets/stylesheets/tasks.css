@@ -146,6 +146,7 @@ input[type=checkbox] {
 
 .no-task-message p {
   font-size: 48px;
+  margin: 30px;
 }
 
 /* タスク登録画面 */
@@ -178,4 +179,10 @@ input[type=checkbox] {
   height: 50px;
   font-size: 18px;
   margin: 10px;
+}
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
