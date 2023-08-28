@@ -1,6 +1,11 @@
 <div class="contents-row">
   <div class="task-post">
-  <a class="post" href="/tasks/new">タスクを追加する</a>
+  <div class="buttons-row">
+    <a class="post" href="/tasks/new">タスクを追加する</a>
+    <% if @tasks.present? %>
+      <%= link_to "全て削除", destroy_all_tasks_path, method: :delete, class: "post" %>
+    <% end %>
+  </div>
     <% @tasks.each do |task| %>
       <div class="task-list">
         <label>
@@ -30,7 +35,7 @@
     <% if @tasks.blank? %>
       <div class="no-task-message">
         <p>タスクはありません</p>
-        <%= image_tag("s512_choju57_0019_1.png", style: "max-width: 300px;") %>
+        <%= image_tag("s512_choju57_0019_1.png") %>
       </div>
     <% end %>
 

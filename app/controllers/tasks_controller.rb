@@ -28,6 +28,11 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy_all
+    Task.destroy_all
+    redirect_to tasks_path
+  end
+
   private
   def task_params
     params.require(:task).permit(:task_name, :deadline, :required_time)
