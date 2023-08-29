@@ -6,6 +6,7 @@
       <%= link_to "全て削除", destroy_all_tasks_path, method: :delete, class: "post" %>
     <% end %>
   </div>
+  <div class="tasks-row">
     <% @tasks.each do |task| %>
       <div class="task-list">
         <label>
