@@ -32,6 +32,12 @@
       </div>
     <% end %>
 
+    <div id="mask" class="hidden"></div>
+    <section id="modal" class="hidden">
+      <p>全てのタスクを完了しました！えらい！🙌</p>
+      <%= image_tag("s512_choju38_0007_11.png", width: "auto", height: "50%") %>
+    </section>
+
     <%# タスクがない時 %>
     <% if @tasks.blank? %>
       <div class="no-task-message">
@@ -62,24 +68,30 @@
 
   function checkAllTasksCompleted() {
     const allTasks = document.querySelectorAll('.task-list');
+    let allChecked = true;
 
     for (let i = 0; i < allTasks.length; i++) {
       if (!allTasks[i].querySelector('input[type="checkbox"]').checked) {
-        return;
+        allChecked = false;
+        break;
       }
     }
 
-    praiseUser();
+    if (allChecked) {
+      showMaskAndModal();
+    }
   }
 
-  function praiseUser() {
-    const praises = [
-        '素晴らしい！全てのタスクを達成しました！',
-        'おめでとうございます！すべてのタスクが完了しました！',
-        'すごい！全てのタスクにチェックがつきました！'
-    ];
+  function showMaskAndModal() {
+    const mask = document.getElementById('mask');
+    const modal = document.getElementById('modal');
+    
+    mask.classList.remove('hidden');
+    modal.classList.remove('hidden');
 
-    const randomIndex = Math.floor(Math.random() * praises.length);
-    alert(praises[randomIndex]);
+    mask.addEventListener('click', function() {
+        mask.classList.add('hidden');
+        modal.classList.add('hidden');
+    });
   }
 </script>
